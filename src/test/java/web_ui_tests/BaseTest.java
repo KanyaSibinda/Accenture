@@ -22,8 +22,9 @@ public class BaseTest {
     @BeforeMethod
     public void lauchWebsite() {
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
+        // options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
         applications = new Applications(driver);
     }
 
